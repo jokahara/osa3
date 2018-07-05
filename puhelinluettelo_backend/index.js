@@ -3,6 +3,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 
+app.use(express.static('build'))
+
 app.use(bodyParser.json())
 
 morgan.token('content', (req, res) => { 
